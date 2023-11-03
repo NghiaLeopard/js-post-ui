@@ -7,3 +7,6 @@ export function setupCounter(element) {
   element.addEventListener('click', () => setCounter(counter + 1))
   setCounter(0)
 }
+
+console.log(JSON.parse('{"foo": 1}'));
+console.log(JSON.stringify({foo: 1}));

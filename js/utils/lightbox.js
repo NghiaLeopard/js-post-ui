@@ -28,7 +28,7 @@ export function registerLightBox({ modalElementId, lightBoxId, prevElementId, ne
     const { target } = event
     if (target.tagName !== 'IMG' || !target.dataset.album) return
     current = [...imgList].findIndex((x) => x === target)
-    
+
     // if (current === 0 || imgList.length === 1) prevElement.classList.add('disabled')
     // else prevElement.classList.remove('disabled')
 
@@ -47,7 +47,6 @@ export function registerLightBox({ modalElementId, lightBoxId, prevElementId, ne
     // if (current === 0 || imgList.length === 1) prevElement.classList.add('disabled')
 
     lightBoxElement.src = imgList[current % imgList.length].src
-    console.log(current)
   })
 
   nextElement.addEventListener('click', () => {
